@@ -29,8 +29,15 @@ public class Test extends BaseCronJob{
         //将数据存入map
         List<Map<String, Object>> result= Savemap();
         JSONArray jsonArray = JSONArray.fromObject(result);
-        logBean.writeLog(jsonArray);
+        //logBean.writeLog(jsonArray);
+
     }
+
+
+
+
+
+
 
        public void  Test1() {//测试获取数据并打印
         RecordSet rs = new RecordSet();
@@ -47,6 +54,8 @@ public class Test extends BaseCronJob{
    }
 
 }
+
+
     public List<Map<String, Object>> Savemap(){
         RecordSet rs = new RecordSet();
         String configSql = "select * from hrmresource";
